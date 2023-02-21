@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="client_manager_maui.MainPage"
+             Title="Bun Venit"
+             BackgroundColor="White"
+             >
+
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label
+                Text="Programare"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                TextColor="Black"
+                HorizontalOptions="Center" />
+            <Image
+                Source="bg.png"
+                SemanticProperties.Description="A psychoterapist a pacient"
+                HeightRequest="300"
+                HorizontalOptions="Center"
+                />
+            
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="10"
+            >
+                <DatePicker
+                    TextColor="Black"
+                    Format="dddd, d / M / yyyy"
+                    HorizontalOptions="Center"
+                    DateSelected="DatePicker_DateSelected"/>
+                <TimePicker
+                     Unfocused="TimePicker_Unfocused"
+                    TextColor="Black"
+                    />
+            </HorizontalStackLayout>
+            
+            <VerticalStackLayout
+                HorizontalOptions="Center">
+                <Label TextColor="Black" Text="Introdu numele clientului"/>
+                <Entry
+                Placeholder="Numele"
+                TextColor="Black"
+                PlaceholderColor="Gray"
+                Completed="Entry_Completed"
+                />
+                <Label TextColor="Black" Text="Introdu numarul de telefon"/>
+                <Entry
+                Placeholder="Numarul"
+                TextColor="Black"
+                PlaceholderColor="Gray"
+                Completed="Entry_Completed_1"
+                Keyboard="Telephone"
+                     
+                />
+            </VerticalStackLayout>
+            <Button 
+                Text="Adauga Programarea"
+                Clicked="Button_Clicked"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

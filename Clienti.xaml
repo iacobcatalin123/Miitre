@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="client_manager_maui.Clienti"
+             Title="Clienti">
+    <ListView
+        BackgroundColor="Transparent"
+        x:Name="listClienti">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                        <HorizontalStackLayout
+                            Spacing="1"
+                            HorizontalOptions="FillAndExpand"
+                            >
+                            <Image Source="person.png"/>
+                            <Label VerticalOptions="Center" Text="{Binding NumeClient}"/>
+                            <Label VerticalOptions="Center" Text="{Binding OraProgramarii}"/>
+                            <Label VerticalOptions="Center" Text="{Binding ZiuaProgramarii}"/>
+                            <Label VerticalOptions="Center" Text="{Binding Numar_telefon}"/>
+                        <Button
+                            HorizontalOptions="End"
+                            Text="Sterge"
+                            BackgroundColor="Transparent"
+                            BorderWidth="1"
+                            BorderColor="DarkRed"
+                            TextColor="Black"
+                            WidthRequest="75"
+                            HeightRequest="40"
+                            Clicked="Button_Clicked_1"
+                            />
+                        </HorizontalStackLayout>
+                        
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>

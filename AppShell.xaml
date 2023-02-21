@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="client_manager_maui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:client_manager_maui"
+    Shell.FlyoutBehavior="Disabled"
+    >
+    <TabBar>
+        <ShellContent
+            Icon="calendar.png"
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage"/>
+
+        <ShellContent Icon="clients.png"
+            Title="Clienti"
+            ContentTemplate="{DataTemplate local:Clienti}"
+            Appearing="ShellContent_Appearing"
+            Route="MainPage"/>
+    </TabBar>
+
+</Shell>
